@@ -7,7 +7,7 @@ cnx = st.connection("snowflake")
 session = cnx.session()
 
 # Application title
-st.title(":cup_with_straw: Customize your Smoothie! :cup_with_straw:")
+st.title(":cup_with_straw: Customize your Favourite Smoothie! :cup_with_straw:")
 
 st.write(
     """Choose the fruits you want in your custom Smoothie!"""
