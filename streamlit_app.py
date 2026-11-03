@@ -1,5 +1,6 @@
 # Import Python packages
 import streamlit as st
+import requests
 from snowflake.snowpark.functions import col
 
 # Connect to Snowflake
@@ -65,3 +66,10 @@ if st.button("Submit Order"):
             f"Your Smoothie is ordered, {name_on_order}!",
             icon="✅"
         )
+# New section to display smoothiefruit nutrition information
+
+smoothiefruit_response = requests.get(
+    "https://my.smoothiefruit.com/api/fruit/watermelon"
+)
+
+st.text(smoothiefruit_response)
